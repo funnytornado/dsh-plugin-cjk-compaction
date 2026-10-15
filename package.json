@@ -1,0 +1,17 @@
+{
+  "name": "dsh-plugin-cjk-compaction",
+  "version": "1.0.0",
+  "description": "CJK-aware context pressure guard for DeepSeek Harness: measures the surface with a script-aware estimate and forces one balanced compaction before the real context window wall.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": ["lib/**/*.js", "cordis.patch.yml", "README.md"],
+  "scripts": { "test": "node test/estimate.test.mjs && node test/decision.test.mjs" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "peerDependencies": { "@deepseek-ai/cordis": "^4.0.1" },
+  "keywords": ["deepseek-harness", "dsh", "plugin", "cordis", "compaction", "context-window", "cjk", "chinese"],
+  "engines": { "node": ">=18" },
+  "repository": { "type": "git", "url": "git+https://github.com/funnytornado/dsh-plugin-cjk-compaction.git" },
+  "homepage": "https://github.com/funnytornado/dsh-plugin-cjk-compaction",
+  "bugs": { "url": "https://github.com/funnytornado/dsh-plugin-cjk-compaction/issues" }
+}

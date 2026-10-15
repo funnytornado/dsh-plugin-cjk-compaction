@@ -1,0 +1,16 @@
+# dsh-plugin-cjk-compaction bundle patch
+# 中文感知的上下文压力护栏。参数含义见 README.md。
+- insert:
+    - id: cjk-compaction
+      name: dsh-plugin-cjk-compaction
+      config:
+        enabled: true
+        watermarkRatio: 0.7
+        cjkTokensPerChar: 0.8
+        baseTokensPerChar: 0.25
+        retainRatio: 0.16
+        cooldownMs: 300000
+        minGrowthTokens: 50000
+        maxRangeAttempts: 24
+        dryRun: false
+        debug: false
